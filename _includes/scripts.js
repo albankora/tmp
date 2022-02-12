@@ -136,7 +136,7 @@ const addContact = document.getElementById("my-contact");
 console.log("is  me")
 if (addContact) {
   const user = 'hello';
-  const site = 'cityguide.tips'
+  const site = 'themenu.page'
   addContact.innerHTML = '<a href="mailto:' + user + '@' + site+ '">' + user + '@' + site + '</a>';
 }
 })
