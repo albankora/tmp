@@ -1,0 +1,47 @@
+<footer class="section has-background-dark has-text-white">
+  <div class="container">
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <p class="has-text-centered-mobile">
+            <span class="has-text-weight-bold has-text-light has-text-grey-light">{{ config.title }} &copy; 2022</span>
+          </p>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <p class="has-text-centered-mobile">
+              Made with <span style="color: #e25555;">&#9829;</span> in London
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  {% if site.isProd %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E23NPTTNFV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E23NPTTNFV');
+    </script>
+  {% endif %}
+
+{% if config.showCookiesAdvice %}
+  {% if config.googleAnalyticsID.length > 0 %}
+    <script> var analyticsID = "{{ config.googleAnalyticsID }}"</script>
+  {% endif %}
+  {% include "cookies-advice.njk" %}
+{% endif %}
+
+<!-- Scripts -->
+{% set js %}
+  {% include "scripts.js" %}
+  {% if config.showCookiesAdvice %}
+    {% include "cookies-advice-script.js" %}
+  {% endif %}
+{% endset %}
+<script>
+  {{ js | jsmin | safe }}
+</script>

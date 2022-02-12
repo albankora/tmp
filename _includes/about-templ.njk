@@ -1,0 +1,31 @@
+---
+title: Título Artículo
+
+---
+
+  {% include "head.njk" %}
+
+  <body class="is-flex is-flex-direction-column">
+
+    {% include "nav.njk" %}
+
+    <section class="section is-flex-grow-1">
+
+       {% topPostMinimalAd %}
+
+      <div class="container articulo content">
+
+        {{ content | safe }}
+
+        {% bottomContentPostMinimalAd %}
+
+      <h2>Contact Us</h2>
+      <p>If you want to contribute to our website or have any question then feel free to contact us at: <strong><span id="my-contact"></span></strong></p>
+      </div>
+
+    </section>
+
+    {% include "footer.njk" %}
+  </body>
+
+</html>
