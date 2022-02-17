@@ -2,7 +2,6 @@ module.exports = function (eleventyConfig) {
     // Carpetas que añade directamente al directorio de salida
     // eleventyConfig.addPassthroughCopy("src/_css");
     eleventyConfig.addPassthroughCopy("src/_images");
-    eleventyConfig.addPassthroughCopy("src/BingSiteAuth.xml");
 
     /* --- ADS --- */
     eleventyConfig.addNunjucksShortcode("topIndexAd", function() {

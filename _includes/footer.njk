@@ -18,20 +18,13 @@
     </div>
   </div>
 </footer>
-  {% if site.isProd %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E23NPTTNFV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-E23NPTTNFV');
-    </script>
-  {% endif %}
+
+{% if site.isProd %}
+  {% if config.googleAnalyticsID.length > 0 %}
+  <script> var analyticsID = "{{ config.googleAnalyticsID }}"</script>
+{% endif %}
 
 {% if config.showCookiesAdvice %}
-  {% if config.googleAnalyticsID.length > 0 %}
-    <script> var analyticsID = "{{ config.googleAnalyticsID }}"</script>
-  {% endif %}
   {% include "cookies-advice.njk" %}
 {% endif %}
 
