@@ -3,14 +3,14 @@ layout: menu.njk
 title: Victory Mansion
 permalink: /england/london/stoke-newington/victory-mansion.html
 featuredImage: /_images/england/london/stoke-newington/victory-mansion.jpg
-country: England
-region: London
-area: Stoke Newington
 address: 18 Stoke Newington High Street
+area: Stoke Newington
+region: London
 postalCode: N16 7PL
+country: England
 lat: 51.5576901
 lng: -0.0763677
-googleMapAddress: https://www.google.com/maps/place/18+Stoke+Newington+High+Street/@51.5576901-0.0763677
+googleMapUrl: https://www.google.com/maps/place/18+Stoke+Newington+High+Street/@51.5576901-0.0763677
 phone: 02034416900
 email: bookings@victorymansion.co.uk
 website: victorymansion.co.uk
@@ -70,7 +70,7 @@ Spiced kimchi - Fermented chinese leaf, daikon, apple & carrot **£5**
 - **Saturday** from 12pm - 2am
 
 ## Location
-[{{address}}, {{area}}, {{region}}, {{postalCode}}, {{country}}]({{googleMapAddress}})
+[{{address}}, {{area}}, {{region}}, {{postalCode}}, {{country}}]({{googleMapUrl}})
 
 ## Contact
 - Email: [{{email}}](mailto:{{email}})

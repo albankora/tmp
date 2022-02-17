@@ -18,10 +18,10 @@
     </div>
   </div>
 </footer>
-
 {% if site.isProd %}
-  {% if config.googleAnalyticsID.length > 0 %}
-  <script> var analyticsID = "{{ config.googleAnalyticsID }}"</script>
+    {% if config.googleAnalyticsID.length > 0 %}
+    <script> var analyticsID = "{{ config.googleAnalyticsID }}"</script>
+  {% endif %}
 {% endif %}
 
 {% if config.showCookiesAdvice %}
